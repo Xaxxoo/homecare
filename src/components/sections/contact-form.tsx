@@ -99,18 +99,18 @@ export function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="bg-white rounded-2xl border border-navy-100 shadow-sm p-8 sm:p-12 text-center">
-        <div className="w-14 h-14 rounded-full bg-green-50 text-green-600 flex items-center justify-center mx-auto mb-5">
+      <div className="bg-white rounded-2xl border border-navy-100/60 shadow-sm shadow-navy-900/[0.03] p-8 sm:p-12 text-center">
+        <div className="w-14 h-14 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center mx-auto mb-5">
           <CheckCircle2 className="w-7 h-7" />
         </div>
-        <h3 className="text-xl font-bold text-navy-900 mb-2">
+        <h3 className="text-[17px] font-bold text-navy-900 mb-2">
           Thank You for Reaching Out
         </h3>
-        <p className="text-navy-600 leading-relaxed max-w-md mx-auto">
+        <p className="text-[15px] text-navy-600 leading-relaxed max-w-md mx-auto">
           We&apos;ve received your inquiry. A member of our team will review your
           message and get in touch with you soon to discuss how we can help.
         </p>
-        <p className="mt-4 text-sm text-navy-400">
+        <p className="mt-4 text-[13px] text-navy-400">
           Note: This form is not yet connected to a backend service. Please
           contact us directly at{" "}
           <a
@@ -128,14 +128,14 @@ export function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white rounded-2xl border border-navy-100 shadow-sm p-6 sm:p-8 lg:p-10 space-y-6"
+      className="bg-white rounded-2xl border border-navy-100/60 shadow-sm shadow-navy-900/[0.03] p-6 sm:p-8 lg:p-10 space-y-6"
       noValidate
     >
       {/* Full Name */}
       <div>
         <label
           htmlFor="fullName"
-          className="block text-sm font-semibold text-navy-800 mb-1.5"
+          className="block text-[13px] font-semibold text-navy-800 mb-1.5"
         >
           Full Name <span className="text-red-500">*</span>
         </label>
@@ -173,7 +173,7 @@ export function ContactForm() {
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-semibold text-navy-800 mb-1.5"
+            className="block text-[13px] font-semibold text-navy-800 mb-1.5"
           >
             Email Address <span className="text-red-500">*</span>
           </label>
@@ -208,7 +208,7 @@ export function ContactForm() {
         <div>
           <label
             htmlFor="phone"
-            className="block text-sm font-semibold text-navy-800 mb-1.5"
+            className="block text-[13px] font-semibold text-navy-800 mb-1.5"
           >
             Phone Number
           </label>
@@ -228,7 +228,7 @@ export function ContactForm() {
       <div>
         <label
           htmlFor="careFor"
-          className="block text-sm font-semibold text-navy-800 mb-1.5"
+          className="block text-[13px] font-semibold text-navy-800 mb-1.5"
         >
           Who are you seeking care for?
         </label>
@@ -251,7 +251,7 @@ export function ContactForm() {
 
       {/* Services interested in */}
       <fieldset>
-        <legend className="block text-sm font-semibold text-navy-800 mb-3">
+        <legend className="block text-[13px] font-semibold text-navy-800 mb-3">
           Which services are you interested in?
         </legend>
         <div className="grid grid-cols-2 gap-2">
@@ -301,7 +301,7 @@ export function ContactForm() {
 
       {/* Contact preference */}
       <fieldset>
-        <legend className="block text-sm font-semibold text-navy-800 mb-3">
+        <legend className="block text-[13px] font-semibold text-navy-800 mb-3">
           Preferred way to be contacted
         </legend>
         <div className="flex gap-3">
@@ -350,7 +350,7 @@ export function ContactForm() {
       <div>
         <label
           htmlFor="message"
-          className="block text-sm font-semibold text-navy-800 mb-1.5"
+          className="block text-[13px] font-semibold text-navy-800 mb-1.5"
         >
           Tell us about your care needs
         </label>

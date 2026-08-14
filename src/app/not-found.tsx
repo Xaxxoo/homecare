@@ -4,9 +4,9 @@ import { Home, ArrowLeft } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-cream-50 to-white pt-32 pb-20 lg:pt-40 lg:pb-32">
+    <section className="relative overflow-hidden bg-gradient-to-b from-cream-50 via-white to-white pt-32 pb-20 lg:pt-40 lg:pb-32 min-h-[70vh] flex items-center">
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-100/20 rounded-full blur-3xl pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-100/15 rounded-[40%_60%_55%_45%/50%_45%_55%_50%] blur-3xl pointer-events-none"
         aria-hidden="true"
       />
       <Container className="relative">
@@ -14,17 +14,17 @@ export default function NotFound() {
           <div className="w-20 h-20 rounded-3xl bg-navy-50 text-navy-400 flex items-center justify-center mx-auto mb-8">
             <Home className="w-9 h-9" />
           </div>
-          <p className="text-sm font-semibold uppercase tracking-widest text-cyan-600 mb-3">
+          <p className="text-[13px] font-semibold uppercase tracking-wider text-cyan-600 mb-3">
             Page Not Found
           </p>
-          <h1 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight tracking-tight">
+          <h1 className="text-[1.75rem] sm:text-[2.25rem] font-extrabold text-navy-900 leading-[1.1] tracking-tight">
             We couldn&apos;t find that page.
           </h1>
           <p className="mt-4 text-lg text-navy-600 leading-relaxed">
             The page you&apos;re looking for may have been moved or doesn&apos;t
             exist. Let us help you find what you need.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
             <Button href="/" size="lg">
               <ArrowLeft className="w-4 h-4" aria-hidden="true" />
               Back to Home

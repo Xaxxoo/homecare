@@ -19,18 +19,20 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-cream-50 to-white pt-32 pb-16 lg:pt-40 lg:pb-20">
+      <section className="relative overflow-hidden bg-gradient-to-b from-cream-50 via-white to-white pt-32 pb-16 lg:pt-40 lg:pb-24">
         <div
-          className="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-100/30 rounded-full blur-3xl -translate-y-1/3 -translate-x-1/3 pointer-events-none"
+          className="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-100/25 rounded-[60%_40%_50%_50%/45%_55%_45%_55%] blur-3xl -translate-y-1/3 -translate-x-1/3 pointer-events-none"
           aria-hidden="true"
         />
         <Container>
           <div className="max-w-3xl mx-auto text-center relative">
-            <p className="text-sm font-semibold uppercase tracking-widest text-cyan-600 mb-4">
+            <p className="text-[13px] font-semibold uppercase tracking-wider text-cyan-600 mb-4">
               Get in Touch
             </p>
-            <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-navy-900 leading-[1.1] tracking-tight">
-              Let&apos;s Talk About the Care You Need
+            <h1 className="text-[2rem] sm:text-[2.5rem] lg:text-[3rem] font-extrabold text-navy-900 leading-[1.08] tracking-tight">
+              Let&apos;s Talk About the
+              <br className="hidden sm:block" />
+              Care You Need
             </h1>
             <p className="mt-6 text-lg text-navy-600 leading-relaxed max-w-2xl mx-auto">
               Whether you&apos;re planning ahead or need support for a loved one,
@@ -42,43 +44,43 @@ export default function ContactPage() {
       </section>
 
       {/* Content */}
-      <section className="py-16 lg:py-24">
+      <section className="py-20 lg:py-32">
         <Container>
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-10">
             {/* Contact Info Sidebar */}
             <AnimateIn direction="left" className="lg:col-span-4">
-              <div className="space-y-8">
+              <div className="space-y-6">
                 <div>
-                  <h2 className="text-xl font-bold text-navy-900 mb-6">
+                  <h2 className="text-[17px] font-bold text-navy-900 mb-6">
                     Contact Information
                   </h2>
-                  <div className="space-y-6">
-                    <div className="flex items-start gap-4">
+                  <div className="space-y-5">
+                    <div className="flex items-start gap-3.5">
                       <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-navy-50 text-navy-500 flex items-center justify-center">
-                        <MapPin className="w-5 h-5" aria-hidden="true" />
+                        <MapPin className="w-[18px] h-[18px]" aria-hidden="true" />
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-navy-800 mb-1">
+                        <p className="text-[13px] font-semibold text-navy-800 mb-1">
                           Address
                         </p>
-                        <address className="text-sm not-italic text-navy-600 leading-relaxed">
+                        <address className="text-[13.5px] not-italic text-navy-600 leading-relaxed">
                           12 Little Brook Ct<br />
                           Windsor Mill / Woodlawn<br />
                           Baltimore, Maryland 21244
                         </address>
                       </div>
                     </div>
-                    <div className="flex items-start gap-4">
+                    <div className="flex items-start gap-3.5">
                       <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-navy-50 text-navy-500 flex items-center justify-center">
-                        <Mail className="w-5 h-5" aria-hidden="true" />
+                        <Mail className="w-[18px] h-[18px]" aria-hidden="true" />
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-navy-800 mb-1">
+                        <p className="text-[13px] font-semibold text-navy-800 mb-1">
                           Email
                         </p>
                         <a
                           href="mailto:hi@asdhomecare.com"
-                          className="text-sm text-navy-600 hover:text-navy-800 transition-colors"
+                          className="text-[13.5px] text-navy-600 hover:text-navy-800 transition-colors link-underline"
                         >
                           hi@asdhomecare.com
                         </a>
@@ -93,11 +95,11 @@ export default function ContactPage() {
                       className="w-5 h-5 text-cyan-600"
                       aria-hidden="true"
                     />
-                    <h3 className="font-bold text-navy-900">
+                    <h3 className="text-[15px] font-bold text-navy-900">
                       What Happens Next?
                     </h3>
                   </div>
-                  <ol className="space-y-3 text-sm text-navy-600 leading-relaxed">
+                  <ol className="space-y-3 text-[13.5px] text-navy-600 leading-relaxed">
                     <li className="flex gap-2.5">
                       <span className="font-bold text-navy-800 flex-shrink-0">
                         1.
@@ -123,10 +125,10 @@ export default function ContactPage() {
                 </div>
 
                 <div className="p-5 rounded-2xl bg-navy-900 text-white">
-                  <p className="text-sm font-semibold mb-1">
+                  <p className="text-[14px] font-semibold mb-1">
                     Need urgent medical help?
                   </p>
-                  <p className="text-xs text-navy-300 leading-relaxed">
+                  <p className="text-[12px] text-navy-300 leading-relaxed">
                     For medical emergencies, please call 911 or visit your
                     nearest emergency room. ASD Homecare does not provide
                     emergency medical services.
@@ -136,7 +138,7 @@ export default function ContactPage() {
             </AnimateIn>
 
             {/* Form */}
-            <AnimateIn direction="right" className="lg:col-span-8">
+            <AnimateIn direction="right" className="lg:col-span-7 lg:col-start-6">
               <ContactForm />
             </AnimateIn>
           </div>
