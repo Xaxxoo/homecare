@@ -8,7 +8,12 @@ import { cn } from "@/lib/utils";
 
 export function ServicesOverview() {
   return (
-    <section className="py-20 lg:py-28 bg-cream-50">
+    <section className="py-20 lg:py-32 bg-cream-50 relative">
+      {/* Organic top transition */}
+      <div
+        className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-navy-100/50 to-transparent"
+        aria-hidden="true"
+      />
       <Container>
         <AnimateIn>
           <SectionHeading
@@ -18,63 +23,73 @@ export function ServicesOverview() {
           />
         </AnimateIn>
 
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {/* Card grid with varying visual weight */}
+        <div className="mt-14 lg:mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
           {services.map((service, index) => {
             const Icon = service.icon;
-            const isHighlighted = index === 0 || index === 5;
+            const isFeature = index === 0 || index === 5;
 
             return (
-              <AnimateIn key={service.slug} delay={index * 0.05}>
+              <AnimateIn key={service.slug} delay={index * 0.04}>
                 <Link
                   href={`/services/${service.slug}`}
                   className={cn(
-                    "group block h-full rounded-2xl p-6 transition-all duration-300",
-                    "hover:shadow-lg hover:shadow-navy-900/5 hover:-translate-y-0.5",
-                    isHighlighted
-                      ? "bg-navy-600 text-white sm:col-span-1"
-                      : "bg-white border border-navy-100/60 hover:border-navy-200"
+                    "group relative block h-full rounded-2xl p-6 lg:p-7 transition-all duration-300",
+                    "hover:-translate-y-1",
+                    isFeature
+                      ? "bg-navy-900 text-white shadow-xl shadow-navy-900/20 hover:shadow-2xl hover:shadow-navy-900/25"
+                      : "bg-white border border-navy-100/60 shadow-sm hover:shadow-md hover:shadow-navy-900/5 hover:border-navy-200/80"
                   )}
                 >
-                  <div
-                    className={cn(
-                      "w-12 h-12 rounded-xl flex items-center justify-center mb-5",
-                      isHighlighted
-                        ? "bg-white/15 text-cyan-300"
-                        : "bg-cyan-50 text-cyan-600"
-                    )}
-                  >
-                    <Icon className="w-6 h-6" aria-hidden="true" />
-                  </div>
-                  <h3
-                    className={cn(
-                      "text-lg font-bold mb-2",
-                      isHighlighted ? "text-white" : "text-navy-900"
-                    )}
-                  >
-                    {service.name}
-                  </h3>
-                  <p
-                    className={cn(
-                      "text-sm leading-relaxed mb-4",
-                      isHighlighted ? "text-navy-200" : "text-navy-500"
-                    )}
-                  >
-                    {service.tagline}
-                  </p>
-                  <span
-                    className={cn(
-                      "inline-flex items-center gap-1.5 text-sm font-semibold",
-                      isHighlighted
-                        ? "text-cyan-300"
-                        : "text-navy-600 group-hover:text-navy-800"
-                    )}
-                  >
-                    Learn More
-                    <ArrowRight
-                      className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"
+                  {/* Subtle gradient overlay on featured cards */}
+                  {isFeature && (
+                    <div
+                      className="absolute inset-0 rounded-2xl bg-gradient-to-br from-navy-800/50 to-transparent pointer-events-none"
                       aria-hidden="true"
                     />
-                  </span>
+                  )}
+                  <div className="relative">
+                    <div
+                      className={cn(
+                        "w-11 h-11 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300",
+                        isFeature
+                          ? "bg-cyan-500/15 text-cyan-400 group-hover:bg-cyan-500/25"
+                          : "bg-cyan-50 text-cyan-600 group-hover:bg-cyan-100"
+                      )}
+                    >
+                      <Icon className="w-5 h-5" aria-hidden="true" />
+                    </div>
+                    <h3
+                      className={cn(
+                        "text-[17px] font-bold mb-2 leading-snug",
+                        isFeature ? "text-white" : "text-navy-900"
+                      )}
+                    >
+                      {service.name}
+                    </h3>
+                    <p
+                      className={cn(
+                        "text-[13.5px] leading-relaxed mb-5",
+                        isFeature ? "text-navy-300" : "text-navy-500"
+                      )}
+                    >
+                      {service.tagline}
+                    </p>
+                    <span
+                      className={cn(
+                        "inline-flex items-center gap-1.5 text-[13px] font-semibold transition-colors",
+                        isFeature
+                          ? "text-cyan-400 group-hover:text-cyan-300"
+                          : "text-navy-600 group-hover:text-navy-900"
+                      )}
+                    >
+                      Learn More
+                      <ArrowRight
+                        className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1"
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </div>
                 </Link>
               </AnimateIn>
             );
