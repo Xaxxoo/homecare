@@ -13,6 +13,7 @@ import {
   Star,
   UserCheck,
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -68,18 +69,20 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-cream-50 to-white pt-32 pb-20 lg:pt-40 lg:pb-28">
+      <section className="relative overflow-hidden bg-gradient-to-b from-cream-50 via-white to-white pt-32 pb-16 lg:pt-40 lg:pb-24">
         <div
-          className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-100/30 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 pointer-events-none"
+          className="absolute top-0 right-0 w-[600px] h-[600px] bg-cyan-100/25 rounded-[40%_60%_60%_40%/50%_40%_60%_50%] blur-3xl -translate-y-1/4 translate-x-1/4 pointer-events-none"
           aria-hidden="true"
         />
         <Container>
           <div className="max-w-3xl mx-auto text-center relative">
-            <p className="text-sm font-semibold uppercase tracking-widest text-cyan-600 mb-4">
+            <p className="text-[13px] font-semibold uppercase tracking-wider text-cyan-600 mb-4">
               About ASD Homecare
             </p>
-            <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-navy-900 leading-[1.1] tracking-tight">
-              Care Centered Around Comfort, Dignity &amp; Independence
+            <h1 className="text-[2rem] sm:text-[2.5rem] lg:text-[3rem] font-extrabold text-navy-900 leading-[1.08] tracking-tight">
+              Care Centered Around
+              <br className="hidden sm:block" />
+              Comfort, Dignity &amp; Independence
             </h1>
             <p className="mt-6 text-lg text-navy-600 leading-relaxed max-w-2xl mx-auto">
               ASD Homecare helps individuals maintain their health, comfort, and
@@ -91,24 +94,24 @@ export default function AboutPage() {
       </section>
 
       {/* Who We Are */}
-      <section className="py-20 lg:py-28">
+      <section className="py-20 lg:py-32">
         <Container>
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <AnimateIn direction="left">
-              <div className="rounded-3xl overflow-hidden shadow-lg shadow-navy-900/5">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+            <AnimateIn direction="left" className="lg:col-span-5">
+              <div className="rounded-2xl lg:rounded-3xl overflow-hidden">
                 {/* TODO: Replace with image of caregiving team or warm home environment */}
                 <ImagePlaceholder
                   alt="ASD Homecare team providing compassionate support in a bright home setting"
-                  aspectRatio="square"
+                  aspectRatio="photo"
                 />
               </div>
             </AnimateIn>
-            <AnimateIn direction="right">
-              <div className="max-w-lg">
-                <p className="text-sm font-semibold uppercase tracking-widest text-cyan-600 mb-3">
+            <AnimateIn direction="right" className="lg:col-span-6 lg:col-start-7">
+              <div>
+                <p className="text-[13px] font-semibold uppercase tracking-wider text-cyan-600 mb-4">
                   Who We Are
                 </p>
-                <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight tracking-tight">
+                <h2 className="text-[1.75rem] sm:text-[2rem] lg:text-[2.25rem] font-bold text-navy-900 leading-[1.15] tracking-tight">
                   Health and Home Support, Working Together
                 </h2>
                 <div className="mt-6 space-y-4 text-navy-600 leading-relaxed">
@@ -132,15 +135,15 @@ export default function AboutPage() {
       </section>
 
       {/* Our Approach */}
-      <section className="py-20 lg:py-28 bg-cream-50">
+      <section className="py-20 lg:py-32 bg-cream-50">
         <Container>
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <AnimateIn direction="left" className="order-2 lg:order-1">
-              <div className="max-w-lg">
-                <p className="text-sm font-semibold uppercase tracking-widest text-cyan-600 mb-3">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+            <AnimateIn direction="left" className="lg:col-span-6 order-2 lg:order-1">
+              <div>
+                <p className="text-[13px] font-semibold uppercase tracking-wider text-cyan-600 mb-4">
                   Our Approach
                 </p>
-                <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight tracking-tight">
+                <h2 className="text-[1.75rem] sm:text-[2rem] lg:text-[2.25rem] font-bold text-navy-900 leading-[1.15] tracking-tight">
                   The Person Comes First. Always.
                 </h2>
                 <div className="mt-6 space-y-4 text-navy-600 leading-relaxed">
@@ -148,8 +151,7 @@ export default function AboutPage() {
                     We don&apos;t start with a list of services and try to fit
                     people into them. We start with the person. What are their
                     routines? What do they value? What kind of support would
-                    actually make their day easier and their life more
-                    comfortable?
+                    actually make their day easier and their life more comfortable?
                   </p>
                   <p>
                     From there, we shape a care approach that respects their
@@ -159,15 +161,12 @@ export default function AboutPage() {
                 </div>
               </div>
             </AnimateIn>
-            <AnimateIn
-              direction="right"
-              className="order-1 lg:order-2"
-            >
-              <div className="rounded-3xl overflow-hidden shadow-lg shadow-navy-900/5">
+            <AnimateIn direction="right" className="lg:col-span-5 lg:col-start-8 order-1 lg:order-2">
+              <div className="rounded-2xl lg:rounded-3xl overflow-hidden">
                 {/* TODO: Replace with image of a caregiver attentively listening to a client */}
                 <ImagePlaceholder
                   alt="A caregiver sitting with a client, listening attentively in a comfortable living room"
-                  aspectRatio="square"
+                  aspectRatio="photo"
                 />
               </div>
             </AnimateIn>
@@ -176,7 +175,7 @@ export default function AboutPage() {
       </section>
 
       {/* What Matters to Us */}
-      <section className="py-20 lg:py-28">
+      <section className="py-20 lg:py-32">
         <Container>
           <AnimateIn>
             <SectionHeading
@@ -186,19 +185,44 @@ export default function AboutPage() {
             />
           </AnimateIn>
 
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {values.map((value, index) => {
               const Icon = value.icon;
+              const isFirst = index === 0;
               return (
-                <AnimateIn key={value.title} delay={index * 0.06}>
-                  <div className="p-6 rounded-2xl bg-cream-50 border border-navy-100/40 hover:border-navy-200/60 transition-colors h-full">
-                    <div className="w-12 h-12 rounded-xl bg-white text-cyan-600 flex items-center justify-center shadow-sm mb-5">
-                      <Icon className="w-6 h-6" aria-hidden="true" />
+                <AnimateIn key={value.title} delay={index * 0.05}>
+                  <div
+                    className={cn(
+                      "rounded-2xl p-6 h-full transition-all duration-300",
+                      isFirst
+                        ? "bg-navy-900 text-white shadow-lg shadow-navy-900/15"
+                        : "bg-cream-50 hover:bg-white hover:shadow-md hover:shadow-navy-900/5 border border-transparent hover:border-navy-100/60"
+                    )}
+                  >
+                    <div
+                      className={cn(
+                        "w-11 h-11 rounded-xl flex items-center justify-center mb-5",
+                        isFirst
+                          ? "bg-cyan-500/15 text-cyan-400"
+                          : "bg-white text-cyan-600 shadow-sm"
+                      )}
+                    >
+                      <Icon className="w-5 h-5" aria-hidden="true" />
                     </div>
-                    <h3 className="text-lg font-bold text-navy-900 mb-2">
+                    <h3
+                      className={cn(
+                        "text-[17px] font-bold mb-2",
+                        isFirst ? "text-white" : "text-navy-900"
+                      )}
+                    >
                       {value.title}
                     </h3>
-                    <p className="text-sm text-navy-600 leading-relaxed">
+                    <p
+                      className={cn(
+                        "text-[14px] leading-relaxed",
+                        isFirst ? "text-navy-300" : "text-navy-600"
+                      )}
+                    >
                       {value.description}
                     </p>
                   </div>
@@ -209,18 +233,18 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Why Home Matters */}
-      <section className="py-20 lg:py-28 bg-cream-50">
+      {/* Why Home Matters - editorial pull-quote style */}
+      <section className="py-20 lg:py-32 bg-cream-50">
         <Container size="narrow">
           <AnimateIn>
             <div className="text-center">
-              <p className="text-sm font-semibold uppercase tracking-widest text-cyan-600 mb-3">
+              <p className="text-[13px] font-semibold uppercase tracking-wider text-cyan-600 mb-4">
                 Why Home Matters
               </p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight tracking-tight">
+              <h2 className="text-[1.75rem] sm:text-[2rem] lg:text-[2.25rem] font-bold text-navy-900 leading-[1.15] tracking-tight">
                 Home Is More Than a Place
               </h2>
-              <div className="mt-6 space-y-4 text-navy-600 leading-relaxed text-lg">
+              <div className="mt-8 space-y-5 text-navy-600 leading-relaxed text-[17px]">
                 <p>
                   Home is where routines feel natural, where surroundings are
                   familiar, and where comfort comes easily. For many people,
