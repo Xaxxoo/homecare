@@ -53,7 +53,7 @@ export function Header() {
   };
 
   const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => setDropdownOpen(false), 150);
+    timeoutRef.current = setTimeout(() => setDropdownOpen(false), 200);
   };
 
   return (
@@ -61,19 +61,19 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-navy-100/50"
-          : "bg-transparent"
+          ? "bg-white/90 backdrop-blur-xl shadow-[0_1px_3px_rgba(0,0,0,0.04)] border-b border-navy-100/40"
+          : "bg-white/0"
       )}
     >
       <Container>
         <nav
-          className="flex items-center justify-between h-18 lg:h-20"
+          className="flex items-center justify-between h-16 lg:h-[72px]"
           aria-label="Main navigation"
         >
           <Logo />
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-0.5">
             {navigation.map((item) => (
               <div
                 key={item.href}
@@ -86,11 +86,11 @@ export function Header() {
                   href={item.href}
                   onClick={closeDropdown}
                   className={cn(
-                    "flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-colors",
+                    "flex items-center gap-1 px-3.5 py-2 text-[14px] font-medium rounded-lg transition-colors",
                     pathname === item.href ||
                       (item.href !== "/" && pathname.startsWith(item.href))
-                      ? "text-navy-900 bg-navy-50"
-                      : "text-navy-600 hover:text-navy-900 hover:bg-navy-50/70"
+                      ? "text-navy-900"
+                      : "text-navy-500 hover:text-navy-800"
                   )}
                   aria-expanded={item.hasDropdown ? dropdownOpen : undefined}
                   aria-haspopup={item.hasDropdown ? "true" : undefined}
@@ -110,10 +110,10 @@ export function Header() {
                 {/* Services Dropdown */}
                 {item.hasDropdown && dropdownOpen && (
                   <div
-                    className="absolute top-full left-1/2 -translate-x-1/2 pt-2"
+                    className="absolute top-full left-1/2 -translate-x-1/2 pt-3"
                     role="menu"
                   >
-                    <div className="bg-white rounded-2xl shadow-xl shadow-navy-900/10 border border-navy-100/60 p-3 w-[320px]">
+                    <div className="bg-white rounded-2xl shadow-xl shadow-navy-900/8 border border-navy-100/50 p-2.5 w-[300px]">
                       <div className="space-y-0.5">
                         {services.map((service) => {
                           const Icon = service.icon;
@@ -125,21 +125,21 @@ export function Header() {
                               className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-cream-50 transition-colors group"
                               role="menuitem"
                             >
-                              <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-cyan-50 text-cyan-600 flex items-center justify-center group-hover:bg-cyan-100 transition-colors">
-                                <Icon className="w-4.5 h-4.5" />
+                              <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-navy-50 text-navy-500 flex items-center justify-center group-hover:bg-cyan-50 group-hover:text-cyan-600 transition-colors">
+                                <Icon className="w-4 h-4" />
                               </div>
-                              <span className="text-sm font-medium text-navy-700 group-hover:text-navy-900 transition-colors">
+                              <span className="text-[13.5px] font-medium text-navy-600 group-hover:text-navy-900 transition-colors">
                                 {service.name}
                               </span>
                             </Link>
                           );
                         })}
                       </div>
-                      <div className="mt-2 pt-2 border-t border-navy-100">
+                      <div className="mt-1.5 pt-1.5 border-t border-navy-100/60">
                         <Link
                           href="/services"
                           onClick={closeDropdown}
-                          className="block px-3 py-2 text-sm font-semibold text-navy-600 hover:text-navy-900 rounded-xl hover:bg-cream-50 transition-colors"
+                          className="block px-3 py-2 text-[13.5px] font-semibold text-navy-600 hover:text-navy-900 rounded-xl hover:bg-cream-50 transition-colors"
                           role="menuitem"
                         >
                           View All Services
@@ -152,7 +152,7 @@ export function Header() {
             ))}
           </div>
 
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center">
             <Button href="/contact" size="default">
               Request Care
             </Button>

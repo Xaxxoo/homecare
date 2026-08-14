@@ -37,13 +37,13 @@ export function MobileNav() {
         aria-label={isOpen ? "Close menu" : "Open menu"}
         aria-expanded={isOpen}
       >
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
       </button>
 
       {/* Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 top-18 bg-navy-950/30 backdrop-blur-sm z-40"
+          className="fixed inset-0 top-16 bg-navy-950/20 backdrop-blur-sm z-40"
           onClick={closeMenu}
           aria-hidden="true"
         />
@@ -52,19 +52,19 @@ export function MobileNav() {
       {/* Drawer */}
       <div
         className={cn(
-          "fixed top-18 right-0 bottom-0 w-full max-w-sm bg-white z-50 shadow-2xl transition-transform duration-300 ease-out overflow-y-auto",
+          "fixed top-16 right-0 bottom-0 w-full max-w-sm bg-white z-50 shadow-2xl shadow-navy-900/10 transition-transform duration-300 ease-out overflow-y-auto",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
         role="dialog"
         aria-modal="true"
         aria-label="Mobile navigation"
       >
-        <nav className="p-6 space-y-1" aria-label="Mobile navigation">
+        <nav className="p-5 space-y-0.5" aria-label="Mobile navigation">
           <Link
             href="/"
             onClick={closeMenu}
             className={cn(
-              "block px-4 py-3 text-base font-medium rounded-xl transition-colors",
+              "block px-4 py-3 text-[15px] font-medium rounded-xl transition-colors",
               pathname === "/"
                 ? "text-navy-900 bg-navy-50"
                 : "text-navy-600 hover:text-navy-900 hover:bg-navy-50"
@@ -76,7 +76,7 @@ export function MobileNav() {
             href="/about"
             onClick={closeMenu}
             className={cn(
-              "block px-4 py-3 text-base font-medium rounded-xl transition-colors",
+              "block px-4 py-3 text-[15px] font-medium rounded-xl transition-colors",
               pathname === "/about"
                 ? "text-navy-900 bg-navy-50"
                 : "text-navy-600 hover:text-navy-900 hover:bg-navy-50"
@@ -90,7 +90,7 @@ export function MobileNav() {
             <button
               onClick={() => setServicesOpen(!servicesOpen)}
               className={cn(
-                "flex items-center justify-between w-full px-4 py-3 text-base font-medium rounded-xl transition-colors",
+                "flex items-center justify-between w-full px-4 py-3 text-[15px] font-medium rounded-xl transition-colors",
                 pathname.startsWith("/services")
                   ? "text-navy-900 bg-navy-50"
                   : "text-navy-600 hover:text-navy-900 hover:bg-navy-50"
@@ -107,11 +107,11 @@ export function MobileNav() {
               />
             </button>
             {servicesOpen && (
-              <div className="mt-1 ml-4 space-y-0.5">
+              <div className="mt-1 ml-4 space-y-0.5 pb-1">
                 <Link
                   href="/services"
                   onClick={closeMenu}
-                  className="block px-4 py-2.5 text-sm font-semibold text-navy-700 hover:text-navy-900 rounded-lg hover:bg-navy-50 transition-colors"
+                  className="block px-4 py-2.5 text-[13.5px] font-semibold text-navy-700 hover:text-navy-900 rounded-lg hover:bg-navy-50 transition-colors"
                 >
                   All Services
                 </Link>
@@ -122,9 +122,9 @@ export function MobileNav() {
                       key={service.slug}
                       href={`/services/${service.slug}`}
                       onClick={closeMenu}
-                      className="flex items-center gap-3 px-4 py-2.5 text-sm text-navy-600 hover:text-navy-900 rounded-lg hover:bg-navy-50 transition-colors"
+                      className="flex items-center gap-3 px-4 py-2.5 text-[13.5px] text-navy-600 hover:text-navy-900 rounded-lg hover:bg-navy-50 transition-colors"
                     >
-                      <Icon className="w-4 h-4 text-cyan-500 flex-shrink-0" />
+                      <Icon className="w-4 h-4 text-cyan-500 flex-shrink-0" aria-hidden="true" />
                       {service.name}
                     </Link>
                   );
@@ -137,7 +137,7 @@ export function MobileNav() {
             href="/contact"
             onClick={closeMenu}
             className={cn(
-              "block px-4 py-3 text-base font-medium rounded-xl transition-colors",
+              "block px-4 py-3 text-[15px] font-medium rounded-xl transition-colors",
               pathname === "/contact"
                 ? "text-navy-900 bg-navy-50"
                 : "text-navy-600 hover:text-navy-900 hover:bg-navy-50"
@@ -146,7 +146,7 @@ export function MobileNav() {
             Contact
           </Link>
 
-          <div className="pt-4">
+          <div className="pt-5 px-1">
             <Button href="/contact" className="w-full" size="lg" onClick={closeMenu}>
               Request Care
             </Button>
