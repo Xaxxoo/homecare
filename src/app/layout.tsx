@@ -14,24 +14,24 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL("https://asdhomecare.com"),
   title: {
-    default: "ASD Homecare | Compassionate Home Care in Baltimore, Maryland",
-    template: "%s | ASD Homecare",
+    default: "ASD Homecare | Home Care in Baltimore, MD",
+    template: "%s",
   },
   description:
-    "ASD Homecare provides compassionate nursing, personal care, companion care, rehabilitation, dementia support, and home assistance for individuals and families in the Baltimore area.",
+    "ASD Homecare provides compassionate home care in Baltimore, Maryland — skilled nursing, personal care, companion care, dementia support, rehabilitation, and home assistance for individuals and families.",
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "ASD Homecare",
-    title: "ASD Homecare | Compassionate Home Care in Baltimore, Maryland",
+    title: "ASD Homecare | Home Care in Baltimore, MD",
     description:
-      "ASD Homecare provides compassionate nursing, personal care, companion care, rehabilitation, dementia support, and home assistance for individuals and families in the Baltimore area.",
+      "Compassionate home care services in Baltimore, Maryland — skilled nursing, personal care, companion care, dementia support, rehabilitation, and home assistance.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ASD Homecare | Compassionate Home Care in Baltimore, Maryland",
+    title: "ASD Homecare | Home Care in Baltimore, MD",
     description:
-      "Compassionate nursing, personal care, companion care, rehabilitation, dementia support, and home assistance in the Baltimore area.",
+      "Compassionate home care in Baltimore, MD — skilled nursing, personal care, companion care, dementia support, rehabilitation, and home assistance.",
   },
   robots: {
     index: true,

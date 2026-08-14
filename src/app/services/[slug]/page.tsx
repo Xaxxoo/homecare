@@ -31,10 +31,10 @@ export async function generateMetadata({
   }
 
   return {
-    title: service.name,
+    title: `${service.name} | Home Care in Baltimore, MD`,
     description: service.shortDescription,
     openGraph: {
-      title: `${service.name} | ASD Homecare`,
+      title: `${service.name} | ASD Homecare Baltimore`,
       description: service.shortDescription,
     },
   };
@@ -51,24 +51,50 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const Icon = service.icon;
   const relatedServices = getRelatedServices(service.relatedSlugs);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: service.name,
-    description: service.shortDescription,
-    provider: {
-      "@type": "LocalBusiness",
-      name: "ASD Homecare",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "12 Little Brook Ct",
-        addressLocality: "Windsor Mill",
-        addressRegion: "MD",
-        postalCode: "21244",
-        addressCountry: "US",
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: service.name,
+      description: service.shortDescription,
+      provider: {
+        "@type": "LocalBusiness",
+        name: "ASD Homecare",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "12 Little Brook Ct",
+          addressLocality: "Windsor Mill",
+          addressRegion: "MD",
+          postalCode: "21244",
+          addressCountry: "US",
+        },
       },
     },
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://asdhomecare.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Services",
+          item: "https://asdhomecare.com/services",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: service.name,
+          item: `https://asdhomecare.com/services/${service.slug}`,
+        },
+      ],
+    },
+  ];
 
   return (
     <>

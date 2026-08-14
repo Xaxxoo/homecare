@@ -5,13 +5,13 @@ import { ContactForm } from "@/components/sections/contact-form";
 import { Mail, MapPin, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact Us | Baltimore, Maryland",
   description:
-    "Get in touch with ASD Homecare to discuss home healthcare and support services for yourself or a loved one in the Baltimore area.",
+    "Contact ASD Homecare in Baltimore, Maryland to discuss home care services for yourself or a loved one. Serving Windsor Mill, Woodlawn, and the greater Baltimore area.",
   openGraph: {
-    title: "Contact Us | ASD Homecare",
+    title: "Contact ASD Homecare | Baltimore, MD",
     description:
-      "Get in touch with ASD Homecare to discuss home healthcare and support services in the Baltimore area.",
+      "Get in touch with ASD Homecare to discuss home care services in the Baltimore and Windsor Mill, Maryland area.",
   },
 };
 
@@ -35,9 +35,9 @@ export default function ContactPage() {
               Care You Need
             </h1>
             <p className="mt-6 text-lg text-navy-600 leading-relaxed max-w-2xl mx-auto">
-              Whether you&apos;re planning ahead or need support for a loved one,
-              tell us a little about your situation and ASD Homecare can help you
-              explore the next step.
+              Planning ahead or arranging support for a loved one? Tell us a
+              little about your situation and we can help you explore the next
+              step.
             </p>
           </div>
         </Container>

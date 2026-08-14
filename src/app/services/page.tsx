@@ -9,13 +9,13 @@ import { services } from "@/data/services";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Our Services",
+  title: "Home Care Services in Baltimore, MD",
   description:
-    "Explore ASD Homecare's full range of services including skilled nursing, personal care, medication management, rehabilitation, companion care, dementia care, shopping assistance, and house cleaning.",
+    "Explore ASD Homecare's home care services in Baltimore, Maryland — skilled nursing, personal care, companion care, dementia care, rehabilitation, medication management, shopping assistance, and house cleaning.",
   openGraph: {
-    title: "Our Services | ASD Homecare",
+    title: "Home Care Services | ASD Homecare",
     description:
-      "Explore ASD Homecare's full range of home healthcare and support services in the Baltimore area.",
+      "Explore ASD Homecare's full range of home care services in the Baltimore and Windsor Mill, Maryland area.",
   },
 };
 
@@ -43,10 +43,10 @@ export default function ServicesPage() {
               Life at Home
             </h1>
             <p className="mt-6 text-lg text-navy-600 leading-relaxed max-w-2xl mx-auto">
-              From professional nursing to everyday home support, our services
-              are designed to help individuals live comfortably, safely, and
-              independently at home. Every service can be tailored to fit the
-              unique needs of the person receiving care.
+              Our home care services in the Baltimore area range from
+              professional nursing to everyday home support. Each service can be
+              shaped to fit the needs and preferences of the person receiving
+              care.
             </p>
           </div>
         </Container>
