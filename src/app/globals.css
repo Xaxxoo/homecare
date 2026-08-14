@@ -28,6 +28,9 @@
   --color-cream-50: #f7fafc;
   --color-cream-100: #eef3f8;
 
+  --color-warm-50: #faf9f7;
+  --color-warm-100: #f5f3ef;
+
   --font-sans: "Manrope", system-ui, -apple-system, sans-serif;
 }
 
@@ -58,7 +61,16 @@ body {
   color: var(--color-navy-800);
   background-color: #ffffff;
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.75;
+}
+
+/* Typography polish */
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 /* Skip to content */
@@ -83,7 +95,7 @@ body {
 /* Focus styles */
 *:focus-visible {
   outline: 2px solid var(--color-cyan-500);
-  outline-offset: 2px;
+  outline-offset: 3px;
   border-radius: 4px;
 }
 
@@ -96,4 +108,48 @@ body {
 /* Smooth image loading */
 img {
   content-visibility: auto;
+}
+
+/* Animated link underline utility */
+.link-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1.5px;
+  background: currentColor;
+  transition: width 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Organic section divider */
+.section-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.section-wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50px;
+}
+
+@media (min-width: 768px) {
+  .section-wave svg {
+    height: 70px;
+  }
 }
