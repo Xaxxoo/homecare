@@ -12,8 +12,8 @@ interface BreadcrumbsProps {
 
 export function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
-    <nav aria-label="Breadcrumb" className="mb-6">
-      <ol className="flex items-center gap-1.5 text-sm text-navy-500 flex-wrap">
+    <nav aria-label="Breadcrumb" className="mb-8">
+      <ol className="flex items-center gap-1.5 text-[13px] text-navy-400 flex-wrap">
         {items.map((item, index) => (
           <li key={index} className="flex items-center gap-1.5">
             {index > 0 && (

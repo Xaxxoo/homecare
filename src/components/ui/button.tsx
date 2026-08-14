@@ -12,25 +12,25 @@ interface ButtonBaseProps {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-navy-600 text-white hover:bg-navy-700 active:bg-navy-800 shadow-sm shadow-navy-600/20",
+    "bg-navy-600 text-white hover:bg-navy-700 active:bg-navy-800 shadow-md shadow-navy-600/15 hover:shadow-lg hover:shadow-navy-600/20",
   secondary:
-    "bg-cyan-500 text-navy-950 hover:bg-cyan-400 active:bg-cyan-600 shadow-sm shadow-cyan-500/20",
+    "bg-cyan-500 text-navy-950 hover:bg-cyan-400 active:bg-cyan-600 shadow-md shadow-cyan-500/15 hover:shadow-lg hover:shadow-cyan-500/25",
   outline:
-    "border-2 border-navy-200 text-navy-700 hover:border-navy-300 hover:bg-navy-50 active:bg-navy-100",
+    "border border-navy-200 text-navy-700 hover:border-navy-300 hover:bg-navy-50/80 active:bg-navy-100",
   ghost:
     "text-navy-700 hover:bg-navy-50 active:bg-navy-100",
   white:
-    "bg-white text-navy-800 hover:bg-cream-50 active:bg-navy-50 shadow-sm",
+    "bg-white text-navy-800 hover:bg-cream-50 active:bg-navy-50 shadow-md shadow-navy-900/8 hover:shadow-lg",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
-  sm: "px-4 py-2 text-sm",
-  default: "px-6 py-3 text-sm",
-  lg: "px-8 py-3.5 text-base",
+  sm: "px-4 py-2 text-[13px]",
+  default: "px-6 py-2.5 text-[14px]",
+  lg: "px-7 py-3 text-[15px]",
 };
 
 const baseStyles =
-  "inline-flex items-center justify-center gap-2 font-semibold rounded-xl transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500 disabled:opacity-50 disabled:pointer-events-none cursor-pointer";
+  "inline-flex items-center justify-center gap-2 font-semibold rounded-xl transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500 disabled:opacity-50 disabled:pointer-events-none cursor-pointer select-none";
 
 type ButtonAsButton = ButtonBaseProps &
   ComponentProps<"button"> & { href?: never };
