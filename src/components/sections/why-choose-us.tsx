@@ -1,5 +1,4 @@
 import { Container } from "@/components/ui/container";
-import { SectionHeading } from "@/components/ui/section-heading";
 import { AnimateIn } from "@/components/ui/animate-in";
 import {
   UserCheck,
@@ -8,6 +7,7 @@ import {
   Sunrise,
   HandHeart,
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const values = [
   {
@@ -44,45 +44,78 @@ const values = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-20 lg:py-28">
+    <section className="py-20 lg:py-32">
       <Container>
-        <AnimateIn>
-          <SectionHeading
-            eyebrow="Why ASD Homecare"
-            title="Support You Can Feel Good About"
-            description="We approach every individual's care with the same values: respect, compassion, and a genuine commitment to quality of life."
-          />
-        </AnimateIn>
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
+          {/* Left: sticky heading */}
+          <AnimateIn className="lg:col-span-5">
+            <div className="lg:sticky lg:top-32">
+              <p className="text-[13px] font-semibold uppercase tracking-wider text-cyan-600 mb-4">
+                Why ASD Homecare
+              </p>
+              <h2 className="text-[1.75rem] sm:text-[2rem] lg:text-[2.5rem] font-bold text-navy-900 leading-[1.12] tracking-tight">
+                Support You Can Feel Good About
+              </h2>
+              <p className="mt-5 text-navy-600 leading-relaxed max-w-md">
+                We approach every individual&apos;s care with the same values:
+                respect, compassion, and a genuine commitment to quality of life.
+              </p>
+              {/* Decorative element */}
+              <div className="hidden lg:block mt-10">
+                <div className="w-16 h-1 rounded-full bg-gradient-to-r from-cyan-400 to-navy-300" />
+              </div>
+            </div>
+          </AnimateIn>
 
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
-          {values.map((value, index) => {
-            const Icon = value.icon;
-            return (
-              <AnimateIn key={value.title} delay={index * 0.08}>
-                <div
-                  className={
-                    index === values.length - 1
-                      ? "sm:col-span-2 lg:col-span-1 sm:max-w-md sm:mx-auto lg:max-w-none"
-                      : ""
-                  }
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-50 to-navy-50 text-cyan-600 flex items-center justify-center">
-                      <Icon className="w-6 h-6" aria-hidden="true" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-navy-900 mb-2">
-                        {value.title}
-                      </h3>
-                      <p className="text-navy-600 text-[15px] leading-relaxed">
-                        {value.description}
-                      </p>
+          {/* Right: values list with varied visual treatment */}
+          <div className="lg:col-span-7 space-y-5">
+            {values.map((value, index) => {
+              const Icon = value.icon;
+              return (
+                <AnimateIn key={value.title} delay={index * 0.06}>
+                  <div
+                    className={cn(
+                      "group rounded-2xl p-6 transition-all duration-300",
+                      index === 0
+                        ? "bg-navy-900 text-white shadow-lg shadow-navy-900/15"
+                        : "bg-cream-50 hover:bg-white hover:shadow-md hover:shadow-navy-900/5 border border-transparent hover:border-navy-100/60"
+                    )}
+                  >
+                    <div className="flex items-start gap-5">
+                      <div
+                        className={cn(
+                          "flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center transition-colors",
+                          index === 0
+                            ? "bg-cyan-500/15 text-cyan-400"
+                            : "bg-white text-cyan-600 shadow-sm group-hover:bg-cyan-50"
+                        )}
+                      >
+                        <Icon className="w-5 h-5" aria-hidden="true" />
+                      </div>
+                      <div>
+                        <h3
+                          className={cn(
+                            "text-[17px] font-bold mb-1.5",
+                            index === 0 ? "text-white" : "text-navy-900"
+                          )}
+                        >
+                          {value.title}
+                        </h3>
+                        <p
+                          className={cn(
+                            "text-[15px] leading-relaxed",
+                            index === 0 ? "text-navy-300" : "text-navy-600"
+                          )}
+                        >
+                          {value.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </AnimateIn>
-            );
-          })}
+                </AnimateIn>
+              );
+            })}
+          </div>
         </div>
       </Container>
     </section>

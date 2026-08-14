@@ -1,8 +1,8 @@
 import { Container } from "@/components/ui/container";
-import { SectionHeading } from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { MessageCircle, ClipboardList, FileCheck, Home } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const steps = [
   {
@@ -37,46 +37,64 @@ const steps = [
 
 export function ProcessSteps() {
   return (
-    <section className="py-20 lg:py-28 bg-cream-50">
-      <Container>
+    <section className="py-20 lg:py-32 bg-navy-900 relative overflow-hidden">
+      {/* Subtle background texture */}
+      <div
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        style={{
+          backgroundImage: "radial-gradient(rgba(255,255,255,0.8) 1px, transparent 1px)",
+          backgroundSize: "32px 32px",
+        }}
+        aria-hidden="true"
+      />
+      <div
+        className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 pointer-events-none"
+        aria-hidden="true"
+      />
+
+      <Container className="relative">
         <AnimateIn>
-          <SectionHeading
-            eyebrow="How It Works"
-            title="Getting Started Is Simple"
-            description="We've made the process of exploring home care straightforward and personal."
-          />
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="text-[13px] font-semibold uppercase tracking-wider text-cyan-400 mb-4">
+              How It Works
+            </p>
+            <h2 className="text-[1.75rem] sm:text-[2rem] lg:text-[2.5rem] font-bold text-white leading-[1.12] tracking-tight">
+              Getting Started Is Simple
+            </h2>
+            <p className="mt-5 text-navy-300 leading-relaxed text-lg">
+              We&apos;ve made the process of exploring home care straightforward
+              and personal.
+            </p>
+          </div>
         </AnimateIn>
 
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="mt-14 lg:mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-5">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
-              <AnimateIn key={step.number} delay={index * 0.1}>
-                <div className="relative">
-                  {/* Connector line (desktop only) */}
-                  {index < steps.length - 1 && (
-                    <div
-                      className="hidden lg:block absolute top-8 left-[calc(50%+32px)] right-[-32px] h-px bg-navy-200/50"
-                      aria-hidden="true"
-                    />
+              <AnimateIn key={step.number} delay={index * 0.08}>
+                <div
+                  className={cn(
+                    "relative rounded-2xl p-6 h-full",
+                    "bg-white/[0.04] border border-white/[0.06] backdrop-blur-sm",
+                    "hover:bg-white/[0.07] transition-colors duration-300"
                   )}
-                  <div className="text-center">
-                    <div className="relative inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white border border-navy-100 shadow-sm mb-5">
-                      <Icon
-                        className="w-7 h-7 text-navy-600"
-                        aria-hidden="true"
-                      />
-                      <span className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-cyan-500 text-white text-xs font-bold flex items-center justify-center">
-                        {step.number}
-                      </span>
+                >
+                  {/* Step number */}
+                  <span className="text-[11px] font-bold text-cyan-400/60 uppercase tracking-widest">
+                    Step {step.number}
+                  </span>
+                  <div className="mt-4 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center">
+                      <Icon className="w-6 h-6" aria-hidden="true" />
                     </div>
-                    <h3 className="text-lg font-bold text-navy-900 mb-2">
-                      {step.title}
-                    </h3>
-                    <p className="text-sm text-navy-600 leading-relaxed">
-                      {step.description}
-                    </p>
                   </div>
+                  <h3 className="text-[17px] font-bold text-white mb-2 leading-snug">
+                    {step.title}
+                  </h3>
+                  <p className="text-[14px] text-navy-300 leading-relaxed">
+                    {step.description}
+                  </p>
                 </div>
               </AnimateIn>
             );
@@ -84,7 +102,7 @@ export function ProcessSteps() {
         </div>
 
         <AnimateIn className="mt-12 text-center">
-          <Button href="/contact" size="lg">
+          <Button href="/contact" variant="secondary" size="lg">
             Start a Conversation
           </Button>
         </AnimateIn>
