@@ -50,8 +50,9 @@ export function Hero() {
             </h1>
             <p className="mt-6 text-[17px] sm:text-lg text-navy-600/90 leading-relaxed max-w-xl">
               ASD Homecare provides compassionate healthcare and everyday support
-              tailored to your needs, helping you or your loved one enjoy greater
-              comfort, dignity, and independence at home.
+              for individuals and families in the Baltimore, Maryland area —
+              helping you or your loved one enjoy greater comfort, dignity, and
+              independence at home.
             </p>
             <div className="mt-9 flex flex-col sm:flex-row gap-3">
               <Button href="/contact" size="lg">

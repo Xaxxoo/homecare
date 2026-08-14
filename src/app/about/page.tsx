@@ -16,13 +16,13 @@ import {
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Us | Home Care in Baltimore, MD",
   description:
-    "Learn about ASD Homecare's approach to compassionate home healthcare and everyday support for individuals and families in the Baltimore area.",
+    "Learn about ASD Homecare's approach to compassionate home healthcare and everyday support for individuals and families in the Baltimore and Windsor Mill, Maryland area.",
   openGraph: {
-    title: "About ASD Homecare",
+    title: "About ASD Homecare | Baltimore, MD",
     description:
-      "Learn about ASD Homecare's approach to compassionate home healthcare and everyday support for individuals and families in the Baltimore area.",
+      "Learn about ASD Homecare's approach to compassionate home healthcare and everyday support in Baltimore, Maryland.",
   },
 };
 
@@ -31,7 +31,7 @@ const values = [
     icon: Heart,
     title: "Compassion",
     description:
-      "Care is delivered with warmth, empathy, and genuine concern for each person's wellbeing.",
+      "Care is delivered with warmth, empathy, and real concern for each person's wellbeing.",
   },
   {
     icon: Shield,
@@ -86,8 +86,8 @@ export default function AboutPage() {
             </h1>
             <p className="mt-6 text-lg text-navy-600 leading-relaxed max-w-2xl mx-auto">
               ASD Homecare helps individuals maintain their health, comfort, and
-              independence in the place they know best. We provide healthcare and
-              home-support services tailored to each person&apos;s needs.
+              independence in the place they know best — with home care and
+              support services shaped around each person&apos;s needs.
             </p>
           </div>
         </Container>
@@ -122,10 +122,10 @@ export default function AboutPage() {
                     support into a single, coordinated approach.
                   </p>
                   <p>
-                    Whether someone needs professional nursing, help with personal
-                    care, companionship, or support keeping their home running
-                    smoothly, we tailor our services around what each individual
-                    actually needs, not a one-size-fits-all checklist.
+                    From professional nursing and personal care to companionship
+                    and household support, we shape our services around what each
+                    individual actually needs — not a one-size-fits-all
+                    checklist.
                   </p>
                 </div>
               </div>
@@ -250,7 +250,7 @@ export default function AboutPage() {
                   familiar, and where comfort comes easily. For many people,
                   staying at home during times of illness, recovery, or aging
                   isn&apos;t just a preference. It&apos;s a meaningful part of
-                  maintaining quality of life.
+                  how they live well.
                 </p>
                 <p>
                   ASD Homecare exists to make that possible. By bringing the right

@@ -7,7 +7,7 @@ import { Shield, Clock, Smile, Heart } from "lucide-react";
 const highlights = [
   { icon: Shield, text: "Safety-focused environment" },
   { icon: Clock, text: "Consistent, familiar routines" },
-  { icon: Smile, text: "Meaningful engagement" },
+  { icon: Smile, text: "Daily engagement and activities" },
   { icon: Heart, text: "Patient, dignified care" },
 ];
 
@@ -37,8 +37,8 @@ export function FeaturedCare() {
                 <p>
                   For individuals living with Alzheimer&apos;s or dementia, the
                   comfort of home and the consistency of familiar routines can
-                  make a profound difference. Our specialized care is built
-                  around patience, safety, and meaningful engagement.
+                  make a real difference. Our specialized care is built
+                  around patience, safety, and consistent engagement.
                 </p>
                 <p>
                   Every person experiences cognitive changes differently. We take

@@ -24,8 +24,8 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Logo theme="dark" showTagline />
             <p className="mt-5 text-[14px] leading-relaxed text-navy-400 max-w-xs">
-              Compassionate healthcare and everyday home support tailored to the
-              individual needs of each client in the Baltimore area.
+              Compassionate home care and everyday support shaped around
+              each client&apos;s needs in the Baltimore, Maryland area.
             </p>
           </div>
 

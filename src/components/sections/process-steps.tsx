@@ -24,7 +24,7 @@ const steps = [
     icon: FileCheck,
     title: "Create a Personalized Plan",
     description:
-      "A care approach tailored to the individual's needs, preferences, and home environment is developed to guide the support provided.",
+      "A care approach shaped around the individual's needs, preferences, and home environment is developed to guide the support provided.",
   },
   {
     number: "04",

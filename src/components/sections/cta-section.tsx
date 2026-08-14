@@ -32,7 +32,7 @@ export function CTASection() {
                 The Right Support Can Make Home Feel Possible Again.
               </h2>
               <p className="mt-6 text-[17px] text-navy-300 leading-relaxed max-w-xl mx-auto">
-                Whether you&apos;re exploring care for yourself or someone you
+                If you&apos;re exploring care for yourself or someone you
                 love, ASD Homecare is here to help you understand the support
                 available.
               </p>

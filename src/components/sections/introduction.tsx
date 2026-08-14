@@ -55,15 +55,14 @@ export function Introduction() {
               <div className="mt-6 space-y-4 text-navy-600 leading-relaxed">
                 <p>
                   Every person has their own routines, preferences, health needs,
-                  and goals. At ASD Homecare, we believe that good care starts
-                  with understanding the whole person, not just a list of tasks.
+                  and goals. Good care starts with understanding the whole person
+                  — not just a list of tasks.
                 </p>
                 <p>
-                  Whether you need professional nursing support, help with daily
-                  activities, companionship, or assistance keeping your home
-                  running smoothly, our services are designed to work around your
-                  life. We meet you where you are and focus on what matters most
-                  to you.
+                  From professional nursing support and help with daily
+                  activities to companionship and home upkeep, our services work
+                  around your life. We meet you where you are and focus on what
+                  matters most to you.
                 </p>
               </div>
               <div className="mt-8">

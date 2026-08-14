@@ -38,7 +38,7 @@ const values = [
     icon: HandHeart,
     title: "Compassionate Relationships",
     description:
-      "Great care begins with trust, patience, and genuine human connection. We build relationships that make care feel natural.",
+      "Great care begins with trust and patience. We build relationships that make care feel natural, not transactional.",
   },
 ];
 
@@ -58,7 +58,7 @@ export function WhyChooseUs() {
               </h2>
               <p className="mt-5 text-navy-600 leading-relaxed max-w-md">
                 We approach every individual&apos;s care with the same values:
-                respect, compassion, and a genuine commitment to quality of life.
+                respect, compassion, and a real commitment to their quality of life.
               </p>
               {/* Decorative element */}
               <div className="hidden lg:block mt-10">
