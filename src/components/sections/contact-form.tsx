@@ -101,7 +101,7 @@ export function ContactForm() {
     return (
       <div className="bg-white rounded-2xl border border-navy-100/60 shadow-sm shadow-navy-900/[0.03] p-8 sm:p-12 text-center">
         <div className="w-14 h-14 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center mx-auto mb-5">
-          <CheckCircle2 className="w-7 h-7" />
+          <CheckCircle2 className="w-7 h-7" aria-hidden="true" />
         </div>
         <h3 className="text-[17px] font-bold text-navy-900 mb-2">
           Thank You for Reaching Out
@@ -110,17 +110,19 @@ export function ContactForm() {
           We&apos;ve received your inquiry. A member of our team will review your
           message and get in touch with you soon to discuss how we can help.
         </p>
-        <p className="mt-4 text-[13px] text-navy-400">
-          Note: This form is not yet connected to a backend service. Please
-          contact us directly at{" "}
-          <a
-            href="mailto:hi@asdhomecare.com"
-            className="text-navy-600 underline"
-          >
-            hi@asdhomecare.com
-          </a>{" "}
-          in the meantime.
-        </p>
+        <div className="mt-6 p-4 rounded-xl bg-cream-50 border border-navy-100/40">
+          <p className="text-[13px] text-navy-600 leading-relaxed">
+            <strong className="text-navy-800">Note:</strong> This form is not yet connected to a backend service. Please
+            contact us directly at{" "}
+            <a
+              href="mailto:hi@asdhomecare.com"
+              className="text-navy-800 underline"
+            >
+              hi@asdhomecare.com
+            </a>{" "}
+            for the fastest response.
+          </p>
+        </div>
       </div>
     );
   }
@@ -254,7 +256,7 @@ export function ContactForm() {
         <legend className="block text-[13px] font-semibold text-navy-800 mb-3">
           Which services are you interested in?
         </legend>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {services.map((service) => (
             <label
               key={service.slug}
@@ -364,6 +366,9 @@ export function ContactForm() {
           className="w-full px-4 py-3 rounded-xl border border-navy-200 hover:border-navy-300 bg-white text-navy-800 text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/40 focus:border-cyan-500 resize-y"
           placeholder="Share anything that would help us understand your situation better..."
         />
+        <p className="mt-2 text-[12px] text-navy-400 leading-relaxed">
+          Please do not include sensitive medical details, insurance IDs, or Social Security numbers in this form. For medical emergencies, call 911.
+        </p>
       </div>
 
       {/* Consent */}

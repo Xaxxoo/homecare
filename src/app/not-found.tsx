@@ -12,7 +12,7 @@ export default function NotFound() {
       <Container className="relative">
         <div className="max-w-lg mx-auto text-center">
           <div className="w-20 h-20 rounded-3xl bg-navy-50 text-navy-400 flex items-center justify-center mx-auto mb-8">
-            <Home className="w-9 h-9" />
+            <Home className="w-9 h-9" aria-hidden="true" />
           </div>
           <p className="text-[13px] font-semibold uppercase tracking-wider text-cyan-600 mb-3">
             Page Not Found
