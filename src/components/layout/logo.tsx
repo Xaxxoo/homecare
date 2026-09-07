@@ -8,9 +8,8 @@ interface LogoProps {
 }
 
 export function Logo({ theme = "light", showTagline = false, className }: LogoProps) {
-  const gold = theme === "dark" ? "#e4b94a" : "#d4a028";
-  const goldLight = theme === "dark" ? "#efd07d" : "#e4b94a";
-  const dark = theme === "dark" ? "#0e1f3d" : "#132a52";
+  const gold = theme === "dark" ? "#e4b94a" : "#c49a1f";
+  const goldLight = theme === "dark" ? "#efd07d" : "#d4a028";
 
   return (
     <Link
@@ -18,37 +17,72 @@ export function Logo({ theme = "light", showTagline = false, className }: LogoPr
       className={cn("flex items-center gap-2.5 group", className)}
       aria-label="ASD Home Care LLC - Home"
     >
-      {/* House with caregiver icon - matches brand flyer */}
+      {/* House outline with person and heart - matches brand flyer */}
       <div className="relative flex-shrink-0 w-10 h-10">
         <svg
           viewBox="0 0 100 100"
           className="w-full h-full transition-transform duration-300 group-hover:scale-105"
+          fill="none"
           aria-hidden="true"
         >
-          {/* House body */}
+          {/* House walls outline */}
           <path
-            d="M15 45 L15 90 L85 90 L85 45"
-            fill={gold}
+            d="M20 48 L20 88 L80 88 L80 48"
+            stroke={gold}
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
-          {/* Roof */}
+          {/* Roof outline */}
           <path
-            d="M5 48 L50 10 L95 48 L85 48 L50 18 L15 48 Z"
-            fill={goldLight}
+            d="M12 52 L50 14 L88 52"
+            stroke={gold}
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           {/* Person head */}
-          <circle cx="50" cy="42" r="7" fill={dark} />
-          {/* Person body with open arms (caregiver pose) */}
-          <path
-            d="M50 49 C50 49 38 55 35 60 L40 62 L46 56 L46 72 L54 72 L54 56 L60 62 L65 60 C62 55 50 49 50 49 Z"
-            fill={dark}
+          <circle
+            cx="50" cy="44"
+            r="7"
+            stroke={gold}
+            strokeWidth="3.5"
           />
-          {/* Heart on chest */}
+          {/* Person body */}
           <path
-            d="M50 58 C50 58 46.5 54 46.5 52.5 C46.5 51 47.8 50 49 50.8 C49.6 51.2 50 51.8 50 51.8 C50 51.8 50.4 51.2 51 50.8 C52.2 50 53.5 51 53.5 52.5 C53.5 54 50 58 50 58 Z"
+            d="M50 51 L50 72"
+            stroke={gold}
+            strokeWidth="3.5"
+            strokeLinecap="round"
+          />
+          {/* Person arms */}
+          <path
+            d="M38 60 L50 55 L62 60"
+            stroke={gold}
+            strokeWidth="3.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          {/* Person legs */}
+          <path
+            d="M50 72 L40 84"
+            stroke={gold}
+            strokeWidth="3.5"
+            strokeLinecap="round"
+          />
+          <path
+            d="M50 72 L60 84"
+            stroke={gold}
+            strokeWidth="3.5"
+            strokeLinecap="round"
+          />
+          {/* Heart at top of house / near person */}
+          <path
+            d="M50 34 C50 34 45 28 42 28 C38.5 28 36.5 31 38 34 C39.5 37 50 42 50 42 C50 42 60.5 37 62 34 C63.5 31 61.5 28 58 28 C55 28 50 34 50 34 Z"
             fill={goldLight}
+            stroke={gold}
+            strokeWidth="1.5"
           />
-          {/* Door */}
-          <rect x="40" y="72" width="20" height="18" rx="2" fill={dark} opacity="0.8" />
         </svg>
       </div>
       <div className="flex flex-col">
