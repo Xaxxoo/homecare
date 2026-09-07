@@ -79,10 +79,10 @@ export default function ContactPage() {
                           Email
                         </p>
                         <a
-                          href="mailto:hi@asdhomecare.com"
+                          href="mailto:asdhomecare@gmail.com"
                           className="text-[13.5px] text-navy-600 hover:text-navy-800 transition-colors link-underline"
                         >
-                          hi@asdhomecare.com
+                          asdhomecare@gmail.com
                         </a>
                       </div>
                     </div>

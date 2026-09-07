@@ -6,7 +6,7 @@ export function OrganizationJsonLd() {
     description:
       "ASD Homecare provides compassionate home care services including skilled nursing, personal care, companion care, dementia care, and home support in the Baltimore, Maryland area.",
     url: "https://asdhomecare.com",
-    email: "hi@asdhomecare.com",
+    email: "asdhomecare@gmail.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "12 Little Brook Ct",

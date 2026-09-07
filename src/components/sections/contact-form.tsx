@@ -115,10 +115,10 @@ export function ContactForm() {
             <strong className="text-navy-800">Note:</strong> This form is not yet connected to a backend service. Please
             contact us directly at{" "}
             <a
-              href="mailto:hi@asdhomecare.com"
+              href="mailto:asdhomecare@gmail.com"
               className="text-navy-800 underline"
             >
-              hi@asdhomecare.com
+              asdhomecare@gmail.com
             </a>{" "}
             for the fastest response.
           </p>

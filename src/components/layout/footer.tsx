@@ -86,14 +86,14 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:hi@asdhomecare.com"
+                  href="mailto:asdhomecare@gmail.com"
                   className="flex items-center gap-3 text-[13.5px] text-navy-400 hover:text-white transition-colors"
                 >
                   <Mail
                     className="w-4 h-4 text-cyan-500/70 flex-shrink-0"
                     aria-hidden="true"
                   />
-                  hi@asdhomecare.com
+                  asdhomecare@gmail.com
                 </a>
               </li>
             </ul>
