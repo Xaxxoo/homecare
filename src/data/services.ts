@@ -18,6 +18,7 @@ export interface Service {
   tagline: string;
   shortDescription: string;
   heroDescription: string;
+  imagePath: string;
   imageAlt: string;
   howWeHelp: string;
   supportAreas: string[];
@@ -37,6 +38,7 @@ export const services: Service[] = [
       "In-home nursing support including wound care, health monitoring, IV therapy, and chronic disease management — delivered where you're most comfortable.",
     heroDescription:
       "When health needs call for professional nursing attention, receiving that care at home can make a real difference. Our skilled nursing services support your health while keeping you in the surroundings you know best.",
+    imagePath: "/images/services/skilled-nursing-care.jpg",
     imageAlt: "A nurse providing care to a patient in their home",
     howWeHelp:
       "Our nursing team works closely with your healthcare providers to deliver support that aligns with your care plan. From routine health monitoring to more involved clinical needs, we bring attentive, skilled care directly to your home.",
@@ -78,6 +80,7 @@ export const services: Service[] = [
       "Compassionate help with bathing, dressing, grooming, mobility, and daily routines — delivered with patience and respect for your dignity and privacy.",
     heroDescription:
       "Everyone deserves to feel comfortable and cared for in their daily routine. Our personal care assistance helps with the activities that keep you feeling like yourself, delivered with patience, respect, and care for your dignity.",
+    imagePath: "/images/services/personal-care-assistance.jpg",
     imageAlt: "A caregiver helping a senior with daily activities at home",
     howWeHelp:
       "Our caregivers provide gentle, respectful assistance with everyday personal needs. We follow your preferences and routines, adapting to what feels comfortable for you while helping you maintain the independence you value.",
@@ -119,6 +122,7 @@ export const services: Service[] = [
       "Stay on track with medication schedules through reminders, compliance support, prescription coordination, and communication with your healthcare providers.",
     heroDescription:
       "Managing multiple medications can feel overwhelming, especially when routines change or prescriptions are adjusted. Our medication management support helps you stay organized and on schedule, working alongside your healthcare providers to keep everything coordinated.",
+    imagePath: "/images/services/medication-management.jpg",
     imageAlt: "A caregiver reviewing medication schedules with a client",
     howWeHelp:
       "We provide structured support for your medication routine, helping ensure that prescriptions are taken as directed and that any concerns are communicated to your healthcare team promptly. Our role is to make medication management simpler and more reliable.",
@@ -160,6 +164,7 @@ export const services: Service[] = [
       "Physical therapy, occupational therapy, and speech therapy at home — supporting your recovery, improving mobility, and building confidence in daily activities.",
     heroDescription:
       "Recovery and rehabilitation look different for everyone. If you're working to regain mobility after surgery, strengthen your ability to manage daily tasks, or improve communication, our home-based rehabilitation services meet you where you are and support your progress at your own pace.",
+    imagePath: "/images/services/rehabilitation-services.jpg",
     imageAlt: "A therapist working with a client on rehabilitation exercises at home",
     howWeHelp:
       "Our rehabilitation support brings therapy services into your home, where you can practice and build skills in the environment where they matter most. We work alongside your prescribed therapy program to help you move toward greater function and independence.",
@@ -201,6 +206,7 @@ export const services: Service[] = [
       "Compassionate companionship, conversation, and help with daily routines to reduce isolation and stay engaged with the people and activities you enjoy.",
     heroDescription:
       "Good health isn't just physical. Feeling connected and valued plays a real role in overall wellbeing. Our companion care gives you someone to share conversations, activities, and everyday moments with — a consistent, caring presence in your day.",
+    imagePath: "/images/services/companion-care.jpg",
     imageAlt: "A caregiver sharing a conversation with a senior in a bright living room",
     howWeHelp:
       "Our companions bring warmth, patience, and real interest into each visit. From sharing a meal to going for a walk, playing a game, or simply having someone to talk to, we help fill the day with connection and support.",
@@ -242,6 +248,7 @@ export const services: Service[] = [
       "Specialized care for individuals living with Alzheimer's or dementia, focused on safety, familiar routines, comfort, dignity, and quality of life.",
     heroDescription:
       "Living with Alzheimer's or dementia brings unique challenges for individuals and their families. Our specialized care focuses on creating a safe, supportive environment that honors the person behind the diagnosis — prioritizing familiar routines, engagement, and the dignity every person deserves.",
+    imagePath: "/images/services/alzheimers-dementia-care.jpg",
     imageAlt: "A caregiver engaging warmly with a senior client in their home",
     howWeHelp:
       "Our approach to dementia care is built on patience, consistency, and deep respect. We learn what matters to each individual and structure support around their routines, preferences, and comfort. Every interaction is guided by compassion and an understanding of how cognitive changes affect daily life.",
@@ -283,6 +290,7 @@ export const services: Service[] = [
       "Support with grocery shopping, essential errands, and household necessities so you can access what you need without the stress of shopping alone.",
     heroDescription:
       "Getting to the store, navigating aisles, and carrying groceries home can become difficult when health or mobility changes. Our shopping assistance takes the stress out of essential errands, helping you keep your home stocked and your needs met.",
+    imagePath: "/images/services/shopping-assistance.jpg",
     imageAlt: "A caregiver helping organize groceries in a home kitchen",
     howWeHelp:
       "We assist with planning shopping lists, making trips to the store, picking up prescriptions, and handling everyday errands. You can come along or have us shop on your behalf — either way, your home has everything you need.",
@@ -324,6 +332,7 @@ export const services: Service[] = [
       "Keep your home tidy, safe, and comfortable with support for light housekeeping, laundry, kitchen cleaning, and everyday home maintenance tasks.",
     heroDescription:
       "A clean home isn't just about appearances. It's about safety, comfort, and peace of mind. When keeping up with housework becomes difficult, our cleaning services help maintain the kind of home environment that supports your health and wellbeing.",
+    imagePath: "/images/services/house-cleaning.jpg",
     imageAlt: "A clean, bright, well-organized home living space",
     howWeHelp:
       "Our housekeeping support covers the everyday tasks that keep your home safe and comfortable. We work around your preferences and schedule, handling the cleaning so you can focus on the things that matter most to you.",

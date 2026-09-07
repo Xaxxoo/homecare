@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { Shield, Clock, Smile, Heart } from "lucide-react";
 
@@ -76,11 +76,13 @@ export function FeaturedCare() {
           {/* Image */}
           <AnimateIn direction="right" className="lg:col-span-6">
             <div className="relative lg:pl-8">
-              <div className="rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl shadow-navy-900/8">
-                {/* TODO: Replace with image of caregiver engaging warmly with senior client */}
-                <ImagePlaceholder
+              <div className="relative aspect-[4/5] rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl shadow-navy-900/8">
+                <Image
+                  src="/images/featured-care-gentle-engagement.jpg"
                   alt="A caregiver engaging gently with an older adult, maintaining eye contact and showing patience"
-                  aspectRatio="photo"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
               {/* Decorative accents */}

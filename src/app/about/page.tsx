@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { CTASection } from "@/components/sections/cta-section";
 import {
@@ -98,11 +98,13 @@ export default function AboutPage() {
         <Container>
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
             <AnimateIn direction="left" className="lg:col-span-5">
-              <div className="rounded-2xl lg:rounded-3xl overflow-hidden">
-                {/* TODO: Replace with image of caregiving team or warm home environment */}
-                <ImagePlaceholder
+              <div className="relative aspect-[4/5] rounded-2xl lg:rounded-3xl overflow-hidden">
+                <Image
+                  src="/images/about-care-team.jpg"
                   alt="ASD Homecare team providing compassionate support in a bright home setting"
-                  aspectRatio="photo"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 42vw"
                 />
               </div>
             </AnimateIn>
@@ -162,11 +164,13 @@ export default function AboutPage() {
               </div>
             </AnimateIn>
             <AnimateIn direction="right" className="lg:col-span-5 lg:col-start-8 order-1 lg:order-2">
-              <div className="rounded-2xl lg:rounded-3xl overflow-hidden">
-                {/* TODO: Replace with image of a caregiver attentively listening to a client */}
-                <ImagePlaceholder
+              <div className="relative aspect-[4/5] rounded-2xl lg:rounded-3xl overflow-hidden">
+                <Image
+                  src="/images/about-caregiver-listening.jpg"
                   alt="A caregiver sitting with a client, listening attentively in a comfortable living room"
-                  aspectRatio="photo"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 42vw"
                 />
               </div>
             </AnimateIn>

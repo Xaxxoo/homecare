@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Button } from "@/components/ui/button";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { CTASection } from "@/components/sections/cta-section";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
@@ -134,11 +134,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 </Button>
               </div>
             </div>
-            <div className="lg:col-span-5 lg:col-start-8 rounded-2xl lg:rounded-3xl overflow-hidden shadow-lg shadow-navy-900/5">
-              {/* TODO: Replace with actual service-specific lifestyle image */}
-              <ImagePlaceholder
+            <div className="relative aspect-video lg:col-span-5 lg:col-start-8 rounded-2xl lg:rounded-3xl overflow-hidden shadow-lg shadow-navy-900/5">
+              <Image
+                src={service.imagePath}
                 alt={service.imageAlt}
-                aspectRatio="video"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 42vw"
               />
             </div>
           </div>

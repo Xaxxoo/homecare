@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { CTASection } from "@/components/sections/cta-section";
 import { ArrowRight } from "lucide-react";
@@ -76,11 +76,13 @@ export default function ServicesPage() {
                           : "lg:order-1 lg:col-span-5"
                       )}
                     >
-                      <div className="rounded-2xl lg:rounded-3xl overflow-hidden shadow-md shadow-navy-900/5">
-                        {/* TODO: Replace with actual service image */}
-                        <ImagePlaceholder
+                      <div className="relative aspect-video rounded-2xl lg:rounded-3xl overflow-hidden shadow-md shadow-navy-900/5">
+                        <Image
+                          src={service.imagePath}
                           alt={service.imageAlt}
-                          aspectRatio="video"
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 1024px) 100vw, 42vw"
                         />
                       </div>
                     </div>

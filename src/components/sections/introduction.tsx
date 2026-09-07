@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { AnimateIn } from "@/components/ui/animate-in";
 
 export function Introduction() {
@@ -11,11 +11,13 @@ export function Introduction() {
           {/* Image - asymmetric sizing */}
           <AnimateIn direction="left" className="lg:col-span-5">
             <div className="relative">
-              <div className="rounded-2xl lg:rounded-3xl overflow-hidden">
-                {/* TODO: Replace with warm image of a caregiver and client sharing a genuine moment */}
-                <ImagePlaceholder
+              <div className="relative aspect-[4/5] rounded-2xl lg:rounded-3xl overflow-hidden">
+                <Image
+                  src="/images/introduction-caregiver-conversation.jpg"
                   alt="A caregiver and senior client enjoying a conversation together"
-                  aspectRatio="photo"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 42vw"
                 />
               </div>
               {/* Floating card - repositioned */}

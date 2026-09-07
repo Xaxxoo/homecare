@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { MapPin, Heart, Home, Shield } from "lucide-react";
 
 const trustItems = [
@@ -68,11 +68,14 @@ export function Hero() {
           <div className="lg:col-span-5">
             <div className="relative">
               {/* Main image container with unique shape */}
-              <div className="relative rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden shadow-2xl shadow-navy-900/12">
-                {/* TODO: Replace with actual hero image of a caregiver and older adult in a warm home environment */}
-                <ImagePlaceholder
+              <div className="relative aspect-[4/5] rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden shadow-2xl shadow-navy-900/12">
+                <Image
+                  src="/images/hero-caregiver-senior.jpg"
                   alt="A caregiver sharing a warm moment with a senior client in a bright, comfortable home"
-                  aspectRatio="photo"
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 42vw"
                 />
               </div>
               {/* Floating accent card */}
