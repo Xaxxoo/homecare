@@ -1,18 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
-  <rect width="100" height="100" rx="20" fill="#132a52"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- House roof -->
+  <path d="M60 6 L105 42 L97 42 L60 14 L23 42 L15 42 Z" fill="#1a2d4d"/>
   <!-- House walls -->
-  <path d="M20 48 L20 88 L80 88 L80 48" stroke="#e4b94a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- Roof -->
-  <path d="M12 52 L50 14 L88 52" stroke="#e4b94a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M27 42 L27 72 L93 72 L93 42" stroke="#1a2d4d" stroke-width="5"/>
+  <!-- Chimney -->
+  <rect x="80" y="16" width="8" height="22" fill="#1a2d4d"/>
+  <!-- Large heart overlapping bottom of house -->
+  <path d="M60 108 C60 108 20 78 20 60 C20 48 30 42 40 46 C48 49 56 56 60 62 C64 56 72 49 80 46 C90 42 100 48 100 60 C100 78 60 108 60 108 Z" fill="#1a2d4d"/>
   <!-- Person head -->
-  <circle cx="50" cy="44" r="7" stroke="#e4b94a" stroke-width="3.5"/>
+  <circle cx="60" cy="56" r="6.5" fill="#c9982a"/>
+  <!-- Person arms raised -->
+  <path d="M60 62 C60 62 48 58 42 52" stroke="#c9982a" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M60 62 C60 62 72 58 78 52" stroke="#c9982a" stroke-width="4.5" stroke-linecap="round"/>
   <!-- Person body -->
-  <path d="M50 51 L50 72" stroke="#e4b94a" stroke-width="3.5" stroke-linecap="round"/>
-  <!-- Person arms -->
-  <path d="M38 60 L50 55 L62 60" stroke="#e4b94a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M60 62 L60 80" stroke="#c9982a" stroke-width="4.5" stroke-linecap="round"/>
   <!-- Person legs -->
-  <path d="M50 72 L40 84" stroke="#e4b94a" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M50 72 L60 84" stroke="#e4b94a" stroke-width="3.5" stroke-linecap="round"/>
-  <!-- Heart -->
-  <path d="M50 34 C50 34 45 28 42 28 C38.5 28 36.5 31 38 34 C39.5 37 50 42 50 42 C50 42 60.5 37 62 34 C63.5 31 61.5 28 58 28 C55 28 50 34 50 34 Z" fill="#efd07d" stroke="#e4b94a" stroke-width="1.5"/>
+  <path d="M60 80 L52 92" stroke="#c9982a" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M60 80 L68 92" stroke="#c9982a" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- Decorative flourish -->
+  <path d="M54 94 C54 94 58 88 60 94 C62 88 66 94 66 94" stroke="#c9982a" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="60" cy="98" r="2" fill="#c9982a"/>
 </svg>

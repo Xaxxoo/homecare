@@ -8,8 +8,8 @@ interface LogoProps {
 }
 
 export function Logo({ theme = "light", showTagline = false, className }: LogoProps) {
-  const gold = theme === "dark" ? "#e4b94a" : "#c49a1f";
-  const goldLight = theme === "dark" ? "#efd07d" : "#d4a028";
+  const navy = theme === "dark" ? "#a5c4e8" : "#1a2d4d";
+  const gold = theme === "dark" ? "#e4b94a" : "#c9982a";
 
   return (
     <Link
@@ -17,72 +17,76 @@ export function Logo({ theme = "light", showTagline = false, className }: LogoPr
       className={cn("flex items-center gap-2.5 group", className)}
       aria-label="ASD Home Care LLC - Home"
     >
-      {/* House outline with person and heart - matches brand flyer */}
+      {/* Logo mark matching brand flyer */}
       <div className="relative flex-shrink-0 w-10 h-10">
         <svg
-          viewBox="0 0 100 100"
+          viewBox="0 0 120 120"
           className="w-full h-full transition-transform duration-300 group-hover:scale-105"
           fill="none"
           aria-hidden="true"
         >
-          {/* House walls outline */}
+          {/* House roof */}
           <path
-            d="M20 48 L20 88 L80 88 L80 48"
-            stroke={gold}
-            strokeWidth="4"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            d="M60 6 L105 42 L97 42 L60 14 L23 42 L15 42 Z"
+            fill={navy}
           />
-          {/* Roof outline */}
+          {/* House walls */}
           <path
-            d="M12 52 L50 14 L88 52"
-            stroke={gold}
-            strokeWidth="4"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            d="M27 42 L27 72 L93 72 L93 42"
+            fill="none"
+            stroke={navy}
+            strokeWidth="5"
           />
-          {/* Person head */}
-          <circle
-            cx="50" cy="44"
-            r="7"
-            stroke={gold}
-            strokeWidth="3.5"
-          />
-          {/* Person body */}
+          {/* Chimney */}
+          <rect x="80" y="16" width="8" height="22" fill={navy} />
+          {/* Large heart overlapping bottom of house */}
           <path
-            d="M50 51 L50 72"
-            stroke={gold}
-            strokeWidth="3.5"
-            strokeLinecap="round"
+            d="M60 108 C60 108 20 78 20 60 C20 48 30 42 40 46 C48 49 56 56 60 62 C64 56 72 49 80 46 C90 42 100 48 100 60 C100 78 60 108 60 108 Z"
+            fill={navy}
           />
-          {/* Person arms */}
+          {/* Person - head */}
+          <circle cx="60" cy="56" r="6.5" fill={gold} />
+          {/* Person - body with arms raised up */}
           <path
-            d="M38 60 L50 55 L62 60"
+            d="M60 62 C60 62 48 58 42 52"
             stroke={gold}
-            strokeWidth="3.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          {/* Person legs */}
-          <path
-            d="M50 72 L40 84"
-            stroke={gold}
-            strokeWidth="3.5"
+            strokeWidth="4.5"
             strokeLinecap="round"
           />
           <path
-            d="M50 72 L60 84"
+            d="M60 62 C60 62 72 58 78 52"
             stroke={gold}
-            strokeWidth="3.5"
+            strokeWidth="4.5"
             strokeLinecap="round"
           />
-          {/* Heart at top of house / near person */}
           <path
-            d="M50 34 C50 34 45 28 42 28 C38.5 28 36.5 31 38 34 C39.5 37 50 42 50 42 C50 42 60.5 37 62 34 C63.5 31 61.5 28 58 28 C55 28 50 34 50 34 Z"
-            fill={goldLight}
+            d="M60 62 L60 80"
             stroke={gold}
-            strokeWidth="1.5"
+            strokeWidth="4.5"
+            strokeLinecap="round"
           />
+          {/* Person - legs */}
+          <path
+            d="M60 80 L52 92"
+            stroke={gold}
+            strokeWidth="4.5"
+            strokeLinecap="round"
+          />
+          <path
+            d="M60 80 L68 92"
+            stroke={gold}
+            strokeWidth="4.5"
+            strokeLinecap="round"
+          />
+          {/* Decorative leaf/flourish below person */}
+          <path
+            d="M54 94 C54 94 58 88 60 94 C62 88 66 94 66 94"
+            stroke={gold}
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            fill="none"
+          />
+          <circle cx="60" cy="98" r="2" fill={gold} />
         </svg>
       </div>
       <div className="flex flex-col">
