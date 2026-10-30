@@ -71,7 +71,7 @@ export function Hero() {
               <div className="relative aspect-[4/5] rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden shadow-2xl shadow-navy-900/12">
                 <Image
                   src="/images/hero-caregiver-senior.jpg"
-                  alt="A caregiver sharing a warm moment with a senior client in a bright, comfortable home"
+                  alt="A caregiver engaging warmly with seniors in a bright, welcoming care setting"
                   fill
                   className="object-cover"
                   priority

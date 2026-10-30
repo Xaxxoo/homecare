@@ -39,7 +39,7 @@ export const services: Service[] = [
     heroDescription:
       "When health needs call for professional nursing attention, receiving that care at home can make a real difference. Our skilled nursing services support your health while keeping you in the surroundings you know best.",
     imagePath: "/images/services/skilled-nursing-care.jpg",
-    imageAlt: "A nurse providing care to a patient in their home",
+    imageAlt: "A nurse collaborating with a colleague in a clinical setting",
     howWeHelp:
       "Our nursing team works closely with your healthcare providers to deliver support that aligns with your care plan. From routine health monitoring to more involved clinical needs, we bring attentive, skilled care directly to your home.",
     supportAreas: [
@@ -81,7 +81,7 @@ export const services: Service[] = [
     heroDescription:
       "Everyone deserves to feel comfortable and cared for in their daily routine. Our personal care assistance helps with the activities that keep you feeling like yourself, delivered with patience, respect, and care for your dignity.",
     imagePath: "/images/services/personal-care-assistance.jpg",
-    imageAlt: "A caregiver helping a senior with daily activities at home",
+    imageAlt: "A comforting hand-holding moment showing warmth and personal care",
     howWeHelp:
       "Our caregivers provide gentle, respectful assistance with everyday personal needs. We follow your preferences and routines, adapting to what feels comfortable for you while helping you maintain the independence you value.",
     supportAreas: [
@@ -123,7 +123,7 @@ export const services: Service[] = [
     heroDescription:
       "Managing multiple medications can feel overwhelming, especially when routines change or prescriptions are adjusted. Our medication management support helps you stay organized and on schedule, working alongside your healthcare providers to keep everything coordinated.",
     imagePath: "/images/services/medication-management.jpg",
-    imageAlt: "A caregiver reviewing medication schedules with a client",
+    imageAlt: "A pharmacist discussing medication with a senior client at the pharmacy",
     howWeHelp:
       "We provide structured support for your medication routine, helping ensure that prescriptions are taken as directed and that any concerns are communicated to your healthcare team promptly. Our role is to make medication management simpler and more reliable.",
     supportAreas: [
@@ -207,7 +207,7 @@ export const services: Service[] = [
     heroDescription:
       "Good health isn't just physical. Feeling connected and valued plays a real role in overall wellbeing. Our companion care gives you someone to share conversations, activities, and everyday moments with — a consistent, caring presence in your day.",
     imagePath: "/images/services/companion-care.jpg",
-    imageAlt: "A caregiver sharing a conversation with a senior in a bright living room",
+    imageAlt: "A senior couple sharing a warm conversation together outdoors",
     howWeHelp:
       "Our companions bring warmth, patience, and real interest into each visit. From sharing a meal to going for a walk, playing a game, or simply having someone to talk to, we help fill the day with connection and support.",
     supportAreas: [

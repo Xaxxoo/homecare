@@ -101,7 +101,7 @@ export default function AboutPage() {
               <div className="relative aspect-[4/5] rounded-2xl lg:rounded-3xl overflow-hidden">
                 <Image
                   src="/images/about-care-team.jpg"
-                  alt="ASD Homecare team providing compassionate support in a bright home setting"
+                  alt="Healthcare professionals reviewing patient care information together"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 42vw"
@@ -167,7 +167,7 @@ export default function AboutPage() {
               <div className="relative aspect-[4/5] rounded-2xl lg:rounded-3xl overflow-hidden">
                 <Image
                   src="/images/about-caregiver-listening.jpg"
-                  alt="A caregiver sitting with a client, listening attentively in a comfortable living room"
+                  alt="A healthcare provider listening attentively during a patient consultation"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 42vw"
